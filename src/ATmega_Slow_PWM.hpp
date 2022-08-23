@@ -37,57 +37,57 @@
 #if ( defined(__AVR_ATmega164P__) || defined(__AVR_ATmega164A__)  || \
       defined(__AVR_ATmega324P__) || defined(__AVR_ATmega324PA__) || defined(__AVR_ATmega324A__) || defined(__AVR_ATmega324PB__) || \
       defined(__AVR_ATmega644__)  || defined(__AVR_ATmega644A__)  || defined(__AVR_ATmega644P__) || \
-			defined(__AVR_ATmega1284__) || defined(__AVR_ATmega1284P__) )
+      defined(__AVR_ATmega1284__) || defined(__AVR_ATmega1284P__) )
 
-	#if ( defined(__AVR_ATmega164P__) || defined(__AVR_ATmega164A__) )
-	
-		#if defined(TIMER_INTERRUPT_USING_ATMEGA_164)
-		  #undef TIMER_INTERRUPT_USING_ATMEGA_164
-		#endif
-		#define TIMER_INTERRUPT_USING_ATMEGA_164      true
+  #if ( defined(__AVR_ATmega164P__) || defined(__AVR_ATmega164A__) )
   
-		#define BOARD_NAME    F("MightyCore ATmega164(A/P)")
-		
-	#elif ( defined(__AVR_ATmega324P__) || defined(__AVR_ATmega324PA__) || defined(__AVR_ATmega324A__) )
-	
-		#if defined(TIMER_INTERRUPT_USING_ATMEGA_324)
-		  #undef TIMER_INTERRUPT_USING_ATMEGA_324
-		#endif
-		#define TIMER_INTERRUPT_USING_ATMEGA_324      true
-		
-		#define BOARD_NAME    F("MightyCore ATmega324(A/P/PA)")
-			
+    #if defined(TIMER_INTERRUPT_USING_ATMEGA_164)
+      #undef TIMER_INTERRUPT_USING_ATMEGA_164
+    #endif
+    #define TIMER_INTERRUPT_USING_ATMEGA_164      true
+  
+    #define BOARD_NAME    F("MightyCore ATmega164(A/P)")
+    
+  #elif ( defined(__AVR_ATmega324P__) || defined(__AVR_ATmega324PA__) || defined(__AVR_ATmega324A__) )
+  
+    #if defined(TIMER_INTERRUPT_USING_ATMEGA_324)
+      #undef TIMER_INTERRUPT_USING_ATMEGA_324
+    #endif
+    #define TIMER_INTERRUPT_USING_ATMEGA_324      true
+    
+    #define BOARD_NAME    F("MightyCore ATmega324(A/P/PA)")
+      
   #elif ( defined(__AVR_ATmega324PB__) )
   
-  	#if defined(TIMER_INTERRUPT_USING_ATMEGA_324PB)
-		  #undef TIMER_INTERRUPT_USING_ATMEGA_324PB
-		#endif
-		#define TIMER_INTERRUPT_USING_ATMEGA_324PB    true
-		
-		#define BOARD_NAME    F("MightyCore ATmega324PB")
-		
-	#elif ( defined(__AVR_ATmega644__)  || defined(__AVR_ATmega644A__)  || defined(__AVR_ATmega644P__) )
-	
-	  #if defined(TIMER_INTERRUPT_USING_ATMEGA_644)
-		  #undef TIMER_INTERRUPT_USING_ATMEGA_644
-		#endif
-		#define TIMER_INTERRUPT_USING_ATMEGA_644    true
-		
-		#define BOARD_NAME    F("MightyCore ATmega644(A/P)")
-		
-	#elif ( defined(__AVR_ATmega1284__) || defined(__AVR_ATmega1284P__) )
-	
-	  #if defined(TIMER_INTERRUPT_USING_ATMEGA_1284)
-		  #undef TIMER_INTERRUPT_USING_ATMEGA_1284
-		#endif
-		#define TIMER_INTERRUPT_USING_ATMEGA_1284   true
-		
-		#define BOARD_NAME    F("MightyCore ATmega1284(P)")
-		
-	#else
-		#define BOARD_NAME    F("Unknown Board")
-	#endif
-	
+    #if defined(TIMER_INTERRUPT_USING_ATMEGA_324PB)
+      #undef TIMER_INTERRUPT_USING_ATMEGA_324PB
+    #endif
+    #define TIMER_INTERRUPT_USING_ATMEGA_324PB    true
+    
+    #define BOARD_NAME    F("MightyCore ATmega324PB")
+    
+  #elif ( defined(__AVR_ATmega644__)  || defined(__AVR_ATmega644A__)  || defined(__AVR_ATmega644P__) )
+  
+    #if defined(TIMER_INTERRUPT_USING_ATMEGA_644)
+      #undef TIMER_INTERRUPT_USING_ATMEGA_644
+    #endif
+    #define TIMER_INTERRUPT_USING_ATMEGA_644    true
+    
+    #define BOARD_NAME    F("MightyCore ATmega644(A/P)")
+    
+  #elif ( defined(__AVR_ATmega1284__) || defined(__AVR_ATmega1284P__) )
+  
+    #if defined(TIMER_INTERRUPT_USING_ATMEGA_1284)
+      #undef TIMER_INTERRUPT_USING_ATMEGA_1284
+    #endif
+    #define TIMER_INTERRUPT_USING_ATMEGA_1284   true
+    
+    #define BOARD_NAME    F("MightyCore ATmega1284(P)")
+    
+  #else
+    #define BOARD_NAME    F("Unknown Board")
+  #endif
+  
 #elif ( defined(__AVR_ATmega8535__) || defined(__AVR_ATmega16__) || defined(__AVR_ATmega32__) )
 
   #error Old MightyCore AVR ATmega8535, ATmega16, ATmega32 not supported, try ATmega164, ATmega324, ATmega644, ATmega1284
@@ -97,19 +97,19 @@
 #endif
 
 #if (_PWM_LOGLEVEL_ > 2)
-	#if ( defined(__AVR_ATmega164P__) || defined(__AVR_ATmega164A__) )
-		#warning MightyCore ATmega164(A/P) with available Timer1-2
-	#elif ( defined(__AVR_ATmega324P__) || defined(__AVR_ATmega324PA__) || defined(__AVR_ATmega324A__) || defined(__AVR_ATmega324PB__) )
-		#warning MightyCore ATmega324(A/P/PA/PB) with available Timer1-2
+  #if ( defined(__AVR_ATmega164P__) || defined(__AVR_ATmega164A__) )
+    #warning MightyCore ATmega164(A/P) with available Timer1-2
+  #elif ( defined(__AVR_ATmega324P__) || defined(__AVR_ATmega324PA__) || defined(__AVR_ATmega324A__) || defined(__AVR_ATmega324PB__) )
+    #warning MightyCore ATmega324(A/P/PA/PB) with available Timer1-2
   #elif ( defined(__AVR_ATmega324PB__) )
-		#warning MightyCore ATmega324PB with available Timer1-4	
-	#elif ( defined(__AVR_ATmega644__)  || defined(__AVR_ATmega644A__)  || defined(__AVR_ATmega644P__) )
-		#warning MightyCore ATmega644(A/P) with available Timer1-2
-	#elif TIMER_INTERRUPT_USING_ATMEGA_1284
-		#warning MightyCore ATmega1284(P)  with available Timer1-3
-	#else
-		#warning Unknown Board
-	#endif
+    #warning MightyCore ATmega324PB with available Timer1-4 
+  #elif ( defined(__AVR_ATmega644__)  || defined(__AVR_ATmega644A__)  || defined(__AVR_ATmega644P__) )
+    #warning MightyCore ATmega644(A/P) with available Timer1-2
+  #elif TIMER_INTERRUPT_USING_ATMEGA_1284
+    #warning MightyCore ATmega1284(P)  with available Timer1-3
+  #else
+    #warning Unknown Board
+  #endif
 #endif
 
 /////////////////////////////////////////////////////////////////////
@@ -132,13 +132,13 @@
 #include "PWM_Generic_Debug.h"
 
 #if defined(min)
-	#undef min
-	#define min(a,b) ((a)<(b)?(a):(b))
+  #undef min
+  #define min(a,b) ((a)<(b)?(a):(b))
 #endif
-	
+  
 #if defined(max)
-	#undef max	
-	#define max(a,b) ((a)>(b)?(a):(b))
+  #undef max  
+  #define max(a,b) ((a)>(b)?(a):(b))
 #endif
 
 #define MAX_COUNT_8BIT            255
