@@ -169,14 +169,14 @@ You can include this `.hpp` file
 
 ```
 // Can be included as many times as necessary, without `Multiple Definitions` Linker Error
-#include "ATmega_Slow_PWM.hpp"     			//https://github.com/khoih-prog/ATmega_Slow_PWM
+#include "ATmega_Slow_PWM.hpp"      //https://github.com/khoih-prog/ATmega_Slow_PWM
 ```
 
 in many files. But be sure to use the following `.h` file **in just 1 `.h`, `.cpp` or `.ino` file**, which must **not be included in any other file**, to avoid `Multiple Definitions` Linker Error
 
 ```
 // To be included only in main(), .ino with setup() to avoid `Multiple Definitions` Linker Error
-#include "ATmega_Slow_PWM.h"           //https://github.com/khoih-prog/ATmega_Slow_PWM
+#include "ATmega_Slow_PWM.h"        //https://github.com/khoih-prog/ATmega_Slow_PWM
 ```
 
 Check the new [**multiFileProject** example](examples/multiFileProject) for a `HOWTO` demo.
@@ -331,7 +331,7 @@ Submit issues to: [ATmega_Slow_PWM issues](https://github.com/khoih-prog/ATmega_
 
 ## DONE
 
-1. Basic hardware multi-channel PWM for **ATmega164(A/P), ATmega324(A/P/PA/PB), ATmega644(A/P), ATmega1284(P)** [MightyCore](https://github.com/MCUdude/MightyCore)
+1. Basic hardware multi-channel PWM for **ATmega164(A/P), ATmega324(A/P/PA/PB), ATmega644(A/P), ATmega1284(P)** using [MightyCore](https://github.com/MCUdude/MightyCore)
 2. Add Table of Contents
 3. Add functions to modify PWM settings on-the-fly
 4. Fix `multiple-definitions` linker error. Drop `src_cpp` and `src_h` directories
