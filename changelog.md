@@ -1,10 +1,10 @@
-# AVR_Slow_PWM Library
+# ATmega_Slow_PWM Library
 
-[![arduino-library-badge](https://www.ardu-badge.com/badge/AVR_Slow_PWM.svg?)](https://www.ardu-badge.com/AVR_Slow_PWM)
-[![GitHub release](https://img.shields.io/github/release/khoih-prog/AVR_Slow_PWM.svg)](https://github.com/khoih-prog/AVR_Slow_PWM/releases)
-[![GitHub](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/khoih-prog/AVR_Slow_PWM/blob/master/LICENSE)
+[![arduino-library-badge](https://www.ardu-badge.com/badge/ATmega_Slow_PWM.svg?)](https://www.ardu-badge.com/ATmega_Slow_PWM)
+[![GitHub release](https://img.shields.io/github/release/khoih-prog/ATmega_Slow_PWM.svg)](https://github.com/khoih-prog/ATmega_Slow_PWM/releases)
+[![GitHub](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/khoih-prog/ATmega_Slow_PWM/blob/master/LICENSE)
 [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](#Contributing)
-[![GitHub issues](https://img.shields.io/github/issues/khoih-prog/AVR_Slow_PWM.svg)](http://github.com/khoih-prog/AVR_Slow_PWM/issues)
+[![GitHub issues](https://img.shields.io/github/issues/khoih-prog/ATmega_Slow_PWM.svg)](http://github.com/khoih-prog/ATmega_Slow_PWM/issues)
 
 ---
 ---
