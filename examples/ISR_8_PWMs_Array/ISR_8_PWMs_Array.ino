@@ -73,7 +73,7 @@ ATmega_Slow_PWM ISR_PWM;
 //////////////////////////////////////////////////////
 
 void TimerHandler()
-{ 
+{
   ISR_PWM.run();
 }
 
@@ -150,22 +150,26 @@ void doingSomething7()
 
 irqCallback irqCallbackStartFunc[] =
 {
-  doingSomething0,  doingSomething1,  doingSomething2,  doingSomething3, 
+  doingSomething0,  doingSomething1,  doingSomething2,  doingSomething3,
   doingSomething4,  doingSomething5,  doingSomething6,  doingSomething7
 };
 
 ////////////////////////////////////////////////
 
 void setup()
-{ 
+{
   Serial.begin(115200);
+
   while (!Serial && millis() < 5000);
 
   delay(2000);
 
-  Serial.print(F("\nStarting ISR_8_PWMs_Array on ")); Serial.println(BOARD_NAME);
+  Serial.print(F("\nStarting ISR_8_PWMs_Array on "));
+  Serial.println(BOARD_NAME);
   Serial.println(ATMEGA_SLOW_PWM_VERSION);
-  Serial.print(F("CPU Frequency = ")); Serial.print(F_CPU / 1000000); Serial.println(F(" MHz"));
+  Serial.print(F("CPU Frequency = "));
+  Serial.print(F_CPU / 1000000);
+  Serial.println(F(" MHz"));
 
   // Timer0 is used for micros(), millis(), delay(), etc and can't be used
   // Select Timer 1-2 for UNO, 1-5 for MEGA, 1,3,4 for 16u4/32u4
@@ -174,7 +178,7 @@ void setup()
 
 #if USING_HW_TIMER_INTERVAL_MS
 
-/////////////////////////////////////////
+  /////////////////////////////////////////
 
 #if USE_TIMER_1
 
@@ -186,7 +190,8 @@ void setup()
 
   if (ITimer1.attachInterruptInterval(HW_TIMER_INTERVAL_MS, TimerHandler))
   {
-    Serial.print(F("Starting  ITimer1 OK, micros() = ")); Serial.println(micros());
+    Serial.print(F("Starting  ITimer1 OK, micros() = "));
+    Serial.println(micros());
   }
   else
     Serial.println(F("Can't set ITimer1. Select another freq. or timer"));
@@ -197,29 +202,31 @@ void setup()
 
   if (ITimer2.attachInterruptInterval(HW_TIMER_INTERVAL_MS, TimerHandler))
   {
-    Serial.print(F("Starting  ITimer2 OK, micros() = ")); Serial.println(micros());
+    Serial.print(F("Starting  ITimer2 OK, micros() = "));
+    Serial.println(micros());
   }
   else
     Serial.println(F("Can't set ITimer2. Select another freq. or timer"));
-    
+
 #elif USE_TIMER_3
 
   ITimer3.init();
 
   if (ITimer3.attachInterruptInterval(HW_TIMER_INTERVAL_MS, TimerHandler))
   {
-    Serial.print(F("Starting  ITimer3 OK, micros() = ")); Serial.println(micros());
+    Serial.print(F("Starting  ITimer3 OK, micros() = "));
+    Serial.println(micros());
   }
   else
     Serial.println(F("Can't set ITimer3. Select another freq. or timer"));
 
 #endif
 
-/////////////////////////////////////////
+  /////////////////////////////////////////
 
 #else
 
-/////////////////////////////////////////
+  /////////////////////////////////////////
 
 #if USE_TIMER_1
 
@@ -231,7 +238,8 @@ void setup()
 
   if (ITimer1.attachInterrupt(HW_TIMER_INTERVAL_FREQ, TimerHandler))
   {
-    Serial.print(F("Starting  ITimer1 OK, micros() = ")); Serial.println(micros());
+    Serial.print(F("Starting  ITimer1 OK, micros() = "));
+    Serial.println(micros());
   }
   else
     Serial.println(F("Can't set ITimer1. Select another freq. or timer"));
@@ -242,7 +250,8 @@ void setup()
 
   if (ITimer2.attachInterrupt(HW_TIMER_INTERVAL_FREQ, TimerHandler))
   {
-    Serial.print(F("Starting  ITimer2 OK, micros() = ")); Serial.println(micros());
+    Serial.print(F("Starting  ITimer2 OK, micros() = "));
+    Serial.println(micros());
   }
   else
     Serial.println(F("Can't set ITimer2. Select another freq. or timer"));
@@ -253,7 +262,8 @@ void setup()
 
   if (ITimer3.attachInterrupt(HW_TIMER_INTERVAL_FREQ, TimerHandler))
   {
-    Serial.print(F("Starting  ITimer3 OK, micros() = ")); Serial.println(micros());
+    Serial.print(F("Starting  ITimer3 OK, micros() = "));
+    Serial.println(micros());
   }
   else
     Serial.println(F("Can't set ITimer3. Select another freq. or timer"));
@@ -261,7 +271,7 @@ void setup()
 #endif
 
 #endif
-  
+
 
   // Just to demonstrate, don't use too many ISR Timers if not absolutely necessary
   // You can use up to 16 timer for each ISR_PWM

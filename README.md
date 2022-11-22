@@ -6,8 +6,11 @@
 [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](#Contributing)
 [![GitHub issues](https://img.shields.io/github/issues/khoih-prog/ATmega_Slow_PWM.svg)](http://github.com/khoih-prog/ATmega_Slow_PWM/issues)
 
+
 <a href="https://www.buymeacoffee.com/khoihprog6" title="Donate to my libraries using BuyMeACoffee"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Donate to my libraries using BuyMeACoffee" style="height: 50px !important;width: 181px !important;" ></a>
 <a href="https://www.buymeacoffee.com/khoihprog6" title="Donate to my libraries using BuyMeACoffee"><img src="https://img.shields.io/badge/buy%20me%20a%20coffee-donate-orange.svg?logo=buy-me-a-coffee&logoColor=FFDD00" style="height: 20px !important;width: 200px !important;" ></a>
+<a href="https://profile-counter.glitch.me/khoih-prog/count.svg" title="Total khoih-prog Visitor count"><img src="https://profile-counter.glitch.me/khoih-prog/count.svg" style="height: 30px;width: 200px;"></a>
+<a href="https://profile-counter.glitch.me/khoih-prog-ATmega_Slow_PWM/count.svg" title="ATmega_Slow_PWM Visitor count"><img src="https://profile-counter.glitch.me/khoih-prog-ATmega_Slow_PWM/count.svg" style="height: 30px;width: 200px;"></a>
 
 ---
 ---
@@ -126,8 +129,7 @@ The catch is **your function is now part of an ISR (Interrupt Service Routine), 
 
  1. [`Arduino IDE 1.8.19+` for Arduino](https://www.arduino.cc/en/Main/Software)
  2. [`MCUdude MightyCore v2.1.3+`](https://github.com/MCUdude/MightyCore) for **ATmega164, ATmega324, ATmega644, ATmega1284**. Use Arduino Board Manager to install. [![Latest release](https://img.shields.io/github/release/MCUdude/MightyCore.svg)](https://github.com/MCUdude/MightyCore/releases/latest/) 
- 
- 5. To use with certain example
+ 3. To use with certain example
    - [`SimpleTimer library`](https://github.com/jfturcot/SimpleTimer) to use with some examples.
    
    
@@ -146,9 +148,9 @@ You can also use this link [![arduino-library-badge](https://www.ardu-badge.com/
 Another way to install is to:
 
 1. Navigate to [**ATmega_Slow_PWM**](https://github.com/khoih-prog/ATmega_Slow_PWM) page.
-2. Download the latest release `ATmega_Slow_PWM-master.zip`.
-3. Extract the zip file to `ATmega_Slow_PWM-master` directory 
-4. Copy whole `ATmega_Slow_PWM-master` folder to Arduino libraries' directory such as `~/Arduino/libraries/`.
+2. Download the latest release `ATmega_Slow_PWM-main.zip`.
+3. Extract the zip file to `ATmega_Slow_PWM-main` directory 
+4. Copy whole `ATmega_Slow_PWM-main` folder to Arduino libraries' directory such as `~/Arduino/libraries/`.
 
 ### VS Code & PlatformIO
 
@@ -167,14 +169,14 @@ The current library implementation, using `xyz-Impl.h` instead of standard `xyz.
 
 You can include this `.hpp` file
 
-```
+```cpp
 // Can be included as many times as necessary, without `Multiple Definitions` Linker Error
 #include "ATmega_Slow_PWM.hpp"      //https://github.com/khoih-prog/ATmega_Slow_PWM
 ```
 
 in many files. But be sure to use the following `.h` file **in just 1 `.h`, `.cpp` or `.ino` file**, which must **not be included in any other file**, to avoid `Multiple Definitions` Linker Error
 
-```
+```cpp
 // To be included only in main(), .ino with setup() to avoid `Multiple Definitions` Linker Error
 #include "ATmega_Slow_PWM.h"        //https://github.com/khoih-prog/ATmega_Slow_PWM
 ```
@@ -234,7 +236,7 @@ Before using any Timer, you have to make sure the Timer has not been used by any
 
 #### 1. Init Hardware Timer
 
-```
+```cpp
 // Select the timers you're using, here ITimer1
 #define USE_TIMER_1     true
 #define USE_TIMER_2     false
@@ -247,7 +249,7 @@ ATmega_Slow_PWM ISR_PWM;
 
 #### 2. Set PWM Frequency, dutycycle, attach irqCallbackStartFunc and irqCallbackStopFunc functions
 
-```
+```cpp
 void irqCallbackStartFunc()
 {
 
@@ -369,6 +371,6 @@ If you want to contribute to this project:
 
 ## Copyright
 
-Copyright 2022- Khoi Hoang
+Copyright (c) 2022- Khoi Hoang
 
 

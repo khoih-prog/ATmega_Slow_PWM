@@ -1,6 +1,6 @@
 /****************************************************************************************************************************
   multiFileProject.ino
-  
+
   For AVR ATmega164, ATmega324, ATmega644, ATmega1284 with MightyCore
   Written by Khoi Hoang
 
@@ -26,24 +26,28 @@
 // To be included only in main(), .ino with setup() to avoid `Multiple Definitions` Linker Error
 #include "ATmega_Slow_PWM.h"
 
-void setup() 
+void setup()
 {
   Serial.begin(115200);
+
   while (!Serial && millis() < 5000);
-  
-  Serial.println(F("\nStart multiFileProject on ")); Serial.println(BOARD_NAME);
+
+  Serial.println(F("\nStart multiFileProject on "));
+  Serial.println(BOARD_NAME);
   Serial.println(ATMEGA_SLOW_PWM_VERSION);
 
 #if defined(ATMEGA_SLOW_PWM_VERSION_MIN)
+
   if (ATMEGA_SLOW_PWM_VERSION_INT < ATMEGA_SLOW_PWM_VERSION_MIN)
   {
     Serial.print(F("Warning. Must use this example on Version equal or later than : "));
     Serial.println(ATMEGA_SLOW_PWM_VERSION_MIN_TARGET);
   }
+
 #endif
 }
 
-void loop() 
+void loop()
 {
   // put your main code here, to run repeatedly:
 }

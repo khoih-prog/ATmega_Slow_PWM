@@ -1,6 +1,6 @@
 /****************************************************************************************************************************
   multiFileProject.h
-  
+
   For AVR ATmega164, ATmega324, ATmega644, ATmega1284 with MightyCore
   Written by Khoi Hoang
 
